@@ -11,11 +11,13 @@ def capture_loop(duration, sp, data_container, time_compensation) -> np.array:
         time.sleep(sp/1000 - time_compensation/1000)  # sampling rate control
     return data_container
 
-def generate_timestamp(duration, sp, data_container, time_compensation):
+def generate_timestamp(duration, sp, data_container, time_compensation, csv_name):
     timestamp_array = capture_loop(
         duration, sp, 
         data_container, 
         time_compensation)
-    timestamp_series = pd.Series(timestamp_array.astype(int)) 
-    print(timestamp_series)
+    timestamp_series = pd.Series(timestamp_array.astype(np.int64))
+
+    print('total measurements recorded:', timestamp_series.size)
+    timestamp_series.to_csv(csv_name, header=False)
     

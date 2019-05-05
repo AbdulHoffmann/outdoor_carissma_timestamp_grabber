@@ -1,3 +1,4 @@
+from __future__ import print_function, division
 from pynput import mouse
 from pynput import keyboard
 import numpy as np
@@ -9,9 +10,12 @@ from output_manager import generate_timestamp
 'Script dynamic vars'
 '''''''''''''''''''''
 activation_char = 'i'
-timespan = 1  # in secs
+timespan = 10  # in secs
 sampling_rate = 10  # in Hz
-time_compensation = 0.35  # in milliseconds
+time_compensation = 0.35  # in milliseconds, depends on system cpu time
+filename = 'test1.csv'
+
+
 sampling_period = (1/sampling_rate)*1000  # in milliseconds
 data_container = np.zeros((sampling_rate*timespan))
 
@@ -39,7 +43,8 @@ def start_timestamp_generation(x, y, button, pressed):
             timespan, 
             sampling_period, 
             data_container, 
-            time_compensation
+            time_compensation,
+            filename
             )
         return False
 
