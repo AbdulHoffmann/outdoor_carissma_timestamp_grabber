@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "${workspaceFolder}/timestamp_gen/bin/python3",
+    "python.pythonPath": "timestamp_gen/bin/python",
     "files.watcherExclude": {
         "**/node_modules/*/**": true,
         "**/timestamp_gen": true,
