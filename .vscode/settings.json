@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/home/abdul/.local/share/virtualenvs/outdoor_carissma_timestamp_grabber-JirVeTTO/bin/python",
+    "python.pythonPath": "/home/ahoffmann/.local/share/virtualenvs/outdoor_carissma_timestamp_grabber-0ewHj648/bin/python",
     "files.watcherExclude": {
         "**/node_modules/*/**": true,
         "**/timestamp_gen": true,

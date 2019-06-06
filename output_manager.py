@@ -21,3 +21,5 @@ def generate_timestamp(duration, sp, data_container, time_compensation, csv_name
     print('total measurements recorded:', timestamp_series.size)
     timestamp_series.to_csv(csv_name, header=False)
     
+# https://stackoverflow.com/questions/42565297/precise-loop-timing-in-python
+# implement try catch for ctrl+c'ing
